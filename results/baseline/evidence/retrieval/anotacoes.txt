@@ -1,0 +1,6 @@
+Temos:
+
+Teste	Resultado	Motivo
+RT-001 Meal reimbursement	PARTIAL	documento correto apareceu, mas não o chunk com R$120
+RT-002 Procurement	PASS	regra correta de 3 quotations foi recuperada
+RT-003 Airport parking	PASS / negative case	não existe limite e nenhum chunk inventou um
