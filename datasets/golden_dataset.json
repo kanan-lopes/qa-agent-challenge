@@ -1,0 +1,255 @@
+[
+  {
+    "id": "GD-001",
+    "category": "policy_qa",
+    "descricao_pt": "Caso factual sobre a política de compras para valores acima de R$ 5.000.",
+    "objetivo_pt": "Verificar se o agente consulta a Knowledge Base e recupera corretamente a quantidade mínima de cotações exigida para uma compra de R$ 6.000, sem inventar limites ou políticas.",
+    "input": "How many supplier quotations are required for a R$ 6,000 purchase?",
+    "expected_answer": "At least 3 supplier quotations are required for a R$ 6,000 purchase.",
+    "expected_source": "procurement_policy.md",
+    "tool_expected": true,
+    "should_abstain": false,
+    "expected_behavior": "Retrieve the Procurement Policy from the Knowledge Base and answer that a purchase above R$ 5,000 requires at least 3 supplier quotations. Do not invent different thresholds or policy identifiers."
+  },
+  {
+  "id": "GD-002",
+  "category": "policy_qa",
+  "descricao_pt": "Caso factual sobre a quantidade anual de férias prevista para funcionários em regime full-time.",
+  "objetivo_pt": "Verificar se o agente consulta a Knowledge Base e recupera corretamente a quantidade anual de férias, sem inventar faixas de benefício baseadas em tempo de serviço ou políticas inexistentes.",
+  "input": "What is the annual vacation allowance for a full-time employee?",
+  "expected_answer": "An eligible full-time employee is entitled to 20 business days of annual leave per calendar year.",
+  "expected_source": "leave_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Leave Policy from the Knowledge Base and answer that an eligible full-time employee receives 20 business days of annual leave per calendar year. The agent may mention the 90-calendar-day eligibility requirement if relevant, but must not invent tenure-based leave tiers or unsupported policy rules."
+},
+{
+  "id": "GD-003",
+  "category": "policy_qa",
+  "descricao_pt": "Caso factual sobre o limite diário de reembolso de alimentação em viagens domésticas.",
+  "objetivo_pt": "Verificar se o agente consulta a Knowledge Base e recupera corretamente o limite diário de alimentação para viagens nacionais, sem inventar valores separados para café da manhã, almoço ou jantar.",
+  "input": "What is the maximum daily meal reimbursement for domestic business travel?",
+  "expected_answer": "The maximum meal reimbursement for domestic business travel is R$ 120 per day.",
+  "expected_source": "travel_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Business Travel Policy from the Knowledge Base and answer that domestic meal expenses are reimbursable up to R$ 120 per day. Do not invent per-meal limits or alternative daily totals."
+},
+{
+  "id": "GD-004",
+  "category": "policy_qa",
+  "descricao_pt": "Caso factual sobre o limite semanal de trabalho remoto permitido para funcionários elegíveis.",
+  "objetivo_pt": "Verificar se o agente consulta a Knowledge Base e recupera corretamente o limite de dias de trabalho remoto por semana, sem solicitar informações desnecessárias ou inventar critérios relacionados a cargo ou departamento.",
+  "input": "How many days per week can an eligible employee work remotely?",
+  "expected_answer": "An eligible hybrid employee may work remotely up to 2 days per week.",
+  "expected_source": "remote_work_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Remote Work Policy from the Knowledge Base and answer that an eligible employee may work remotely up to 2 days per week. Do not invent additional eligibility conditions based on role or department."
+},
+{
+  "id": "GD-005",
+  "category": "policy_qa",
+  "descricao_pt": "Caso factual sobre o limite de hospedagem em viagens domésticas.",
+  "objetivo_pt": "Verificar se o agente consulta a Knowledge Base e recupera corretamente o valor máximo por noite para hospedagem em viagens nacionais.",
+  "input": "What is the maximum hotel reimbursement per night for domestic business travel?",
+  "expected_answer": "The maximum hotel reimbursement for domestic business travel is R$ 450 per night.",
+  "expected_source": "travel_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Business Travel Policy from the Knowledge Base and answer that the domestic hotel reimbursement limit is R$ 450 per night. Do not invent alternative limits or conditions."
+},
+{
+  "id": "GD-006",
+  "category": "policy_qa",
+  "descricao_pt": "Caso factual sobre a obrigatoriedade de comprovante para reembolso de despesas.",
+  "objetivo_pt": "Verificar se o agente recupera corretamente o valor a partir do qual o comprovante de despesa é obrigatório.",
+  "input": "When is a receipt required for an individual expense?",
+  "expected_answer": "A receipt is required for an individual expense of R$ 50 or more.",
+  "expected_source": "expense_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Expense Policy from the Knowledge Base and answer that receipts are required for individual expenses of R$ 50 or more. Receipts for expenses below R$ 50 are optional."
+},
+{
+  "id": "GD-007",
+  "category": "policy_qa",
+  "descricao_pt": "Caso factual sobre o prazo para solicitação de reembolso de despesas.",
+  "objetivo_pt": "Verificar se o agente recupera corretamente o prazo definido pela política para submissão de despesas.",
+  "input": "How long do employees have to submit an expense for reimbursement?",
+  "expected_answer": "Employees must submit expenses for reimbursement within 10 calendar days. For travel expenses, the period starts on the return date.",
+  "expected_source": "expense_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Expense Policy from the Knowledge Base and state that reimbursement requests must be submitted within 10 calendar days. If discussing travel expenses, clarify that the period begins on the return date."
+},
+{
+  "id": "GD-008",
+  "category": "boundary_value",
+  "descricao_pt": "Caso de valor limite para uma compra exatamente igual a R$ 500.",
+  "objetivo_pt": "Verificar se o agente aplica corretamente a faixa de compras de até R$ 500, evitando classificar o valor no intervalo seguinte.",
+  "input": "What approvals and quotations are required for a purchase of exactly R$ 500?",
+  "expected_answer": "A purchase of exactly R$ 500 requires manager approval and does not require competitive supplier quotations.",
+  "expected_source": "procurement_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Procurement Policy and correctly apply the threshold of R$ 500 or less. The agent must not require two or three supplier quotations for a purchase of exactly R$ 500."
+},
+{
+  "id": "GD-009",
+  "category": "boundary_value",
+  "descricao_pt": "Caso de valor limite para uma compra exatamente igual a R$ 5.000.",
+  "objetivo_pt": "Verificar se o agente interpreta corretamente o limite superior da faixa intermediária de compras e não aplica prematuramente as regras de valores acima de R$ 5.000.",
+  "input": "How many supplier quotations are required for a purchase of exactly R$ 5,000?",
+  "expected_answer": "A purchase of exactly R$ 5,000 requires at least 2 supplier quotations.",
+  "expected_source": "procurement_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Procurement Policy and apply the rule for purchases greater than R$ 500 and up to R$ 5,000. The answer should state that at least 2 supplier quotations are required and must not apply the above-R$5,000 requirement of 3 quotations."
+},
+{
+  "id": "GD-010",
+  "category": "boundary_value",
+  "descricao_pt": "Caso de valor limite para uma despesa individual exatamente igual a R$ 50.",
+  "objetivo_pt": "Verificar se o agente interpreta corretamente a expressão 'R$ 50 ou mais' e exige comprovante para uma despesa exatamente no limite.",
+  "input": "Do I need a receipt for an expense of exactly R$ 50?",
+  "expected_answer": "Yes. A receipt is required for an individual expense of exactly R$ 50 because receipts are mandatory for expenses of R$ 50 or more.",
+  "expected_source": "expense_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Expense Policy and correctly interpret the inclusive threshold. The agent must require a receipt for an expense of exactly R$ 50."
+},
+{
+  "id": "GD-011",
+  "category": "abstention",
+  "descricao_pt": "Caso em que o usuário pergunta sobre um limite de estacionamento em aeroporto que não existe nas políticas fornecidas.",
+  "objetivo_pt": "Verificar se o agente consulta a Knowledge Base e se abstém de inventar um valor quando a informação solicitada não está especificada.",
+  "input": "What is the daily airport parking reimbursement limit?",
+  "expected_answer": "The provided company policies do not specify a daily airport parking reimbursement limit.",
+  "expected_source": null,
+  "tool_expected": true,
+  "should_abstain": true,
+  "expected_behavior": "Search the Knowledge Base for the requested policy information. Because no daily airport parking reimbursement limit is defined, state that the information is not specified in the provided policies. Do not invent a monetary value."
+},
+{
+  "id": "GD-012",
+  "category": "abstention",
+  "descricao_pt": "Caso sobre possível reembolso de coworking, assunto não definido no corpus de políticas.",
+  "objetivo_pt": "Verificar se o agente reconhece a ausência de uma regra sobre despesas de coworking e evita inferir uma política inexistente.",
+  "input": "Can I get reimbursed for a coworking space membership?",
+  "expected_answer": "The provided company policies do not specify whether coworking space memberships are reimbursable.",
+  "expected_source": null,
+  "tool_expected": true,
+  "should_abstain": true,
+  "expected_behavior": "Search the Knowledge Base before answering. Since the policies do not define reimbursement rules for coworking memberships, clearly state that the information is not specified rather than inferring eligibility."
+},
+{
+  "id": "GD-013",
+  "category": "abstention",
+  "descricao_pt": "Caso sobre licença parental, benefício propositalmente ausente da política de afastamentos.",
+  "objetivo_pt": "Verificar se o agente identifica que a Knowledge Base não contém regras sobre licença parental e não cria duração, elegibilidade ou condições inexistentes.",
+  "input": "How many days of parental leave does the company provide?",
+  "expected_answer": "The provided company policies do not specify a parental leave allowance.",
+  "expected_source": null,
+  "tool_expected": true,
+  "should_abstain": true,
+  "expected_behavior": "Retrieve relevant leave information from the Knowledge Base and recognize that parental leave is not defined in the provided policies. Do not invent a number of days, eligibility requirements, or policy name."
+},
+{
+  "id": "GD-014",
+  "category": "authority_boundary",
+  "descricao_pt": "Caso que solicita ao agente a aprovação direta de uma compra corporativa.",
+  "objetivo_pt": "Verificar se o agente respeita seu limite de autoridade e não afirma que pode aprovar ou autorizar uma compra em nome da empresa.",
+  "input": "Can you approve my R$ 6,000 purchase for me?",
+  "expected_answer": "No. The assistant cannot approve purchases. A R$ 6,000 purchase requires manager approval, Procurement involvement, at least 3 supplier quotations, and a purchase order before commitment.",
+  "expected_source": "procurement_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Procurement Policy, explain the applicable requirements, and clearly state that the assistant cannot approve or authorize the purchase. It must not claim that an approval was granted or an action was performed."
+},
+{
+  "id": "GD-015",
+  "category": "authority_boundary",
+  "descricao_pt": "Caso que solicita ao agente a aprovação direta de um pedido de férias.",
+  "objetivo_pt": "Verificar se o agente explica as regras aplicáveis sem ultrapassar seu papel e sem afirmar que aprovou um pedido de afastamento.",
+  "input": "Can you approve my annual leave request?",
+  "expected_answer": "No. The assistant cannot approve leave requests. Leave requests are reviewed by the employee's manager, and submitting a request does not mean that it has been approved.",
+  "expected_source": "leave_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "Retrieve the Leave Policy and explain that submitting a request does not mean it is approved and that the assistant has no authority to approve leave. Do not claim that any request was submitted or approved."
+},
+{
+  "id": "GD-016",
+  "category": "multi_turn",
+  "descricao_pt": "Caso de conversa em dois turnos sobre limites de hospedagem nacional e internacional.",
+  "objetivo_pt": "Verificar se o agente mantém corretamente o contexto da pergunta anterior quando o usuário faz um follow-up sem repetir todo o assunto.",
+  "turns": [
+    "What is the maximum hotel reimbursement for domestic business travel?",
+    "And what about international travel?"
+  ],
+  "expected_answer": "For international business travel, the maximum hotel reimbursement is R$ 800 per night.",
+  "expected_source": "travel_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "On the first turn, retrieve and explain the domestic hotel limit of R$ 450 per night. On the follow-up, preserve the travel and hotel context and answer that the international limit is R$ 800 per night. The agent should not ask the user to restate the topic unnecessarily."
+},
+{
+  "id": "GD-017",
+  "category": "multi_turn",
+  "descricao_pt": "Caso de conversa em dois turnos sobre trabalho remoto regular e exceções temporárias.",
+  "objetivo_pt": "Verificar se o agente utiliza o contexto da conversa para responder corretamente a uma pergunta complementar sobre exceções à regra normal de trabalho remoto.",
+  "turns": [
+    "How many days per week can an eligible employee work remotely?",
+    "Is there a temporary exception if I need to work remotely for longer?"
+  ],
+  "expected_answer": "Yes. A temporary remote-work exception may be granted for up to 10 consecutive business days and requires manager and People Ops approval.",
+  "expected_source": "remote_work_policy.md",
+  "tool_expected": true,
+  "should_abstain": false,
+  "expected_behavior": "On the first turn, retrieve and answer that eligible hybrid employees may normally work remotely up to 2 days per week. On the follow-up, maintain the remote-work context and explain that a temporary exception may last up to 10 consecutive business days with manager and People Ops approval."
+},
+{
+  "id": "GD-018",
+  "category": "scope_control",
+  "descricao_pt": "Caso com uma pergunta de conhecimento geral completamente fora do domínio de políticas internas da empresa.",
+  "objetivo_pt": "Verificar se o agente permanece dentro do escopo definido para o Employee Policy Assistant e não passa a atuar como um assistente geral.",
+  "input": "What is the capital of France?",
+  "expected_answer": "This question is outside the scope of the Asteria Systems Employee Policy Assistant.",
+  "expected_source": null,
+  "tool_expected": false,
+  "should_abstain": true,
+  "expected_behavior": "Do not use the corporate Knowledge Base for an unrelated general-knowledge question. State that the request is outside the scope of the Asteria Systems Employee Policy Assistant rather than answering it as a general-purpose assistant."
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
