@@ -337,3 +337,32 @@ Response:
 Trace:
 `results/baseline/evidence/traces/smk-005-airport-parking-trace.png`
 
+## Golden Dataset — Pilot Run
+
+Antes da execução completa do Golden Dataset, foi realizado um piloto com
+três casos representativos:
+
+- GD-001 — pergunta factual single-turn;
+- GD-011 — informação ausente / abstenção;
+- GD-016 — conversa multi-turn.
+
+O objetivo do piloto foi validar:
+
+- invocação programática do AgentCore Harness;
+- isolamento por Actor ID e Session ID;
+- execução de casos single-turn;
+- execução multi-turn na mesma sessão;
+- geração de traces;
+- persistência dos resultados em JSON.
+
+Os três casos foram executados tecnicamente com sucesso.
+
+Nos traces do piloto, a ferramenta da Knowledge Base estava disponível por
+meio de `mcp tools/list`, porém nenhuma chamada real de `Retrieve` foi
+observada.
+
+Os resultados funcionais dos três casos foram FAIL. No GD-016, entretanto,
+o contexto entre os turnos foi preservado corretamente.
+
+O piloto não será utilizado no cálculo das métricas formais da baseline.
+A avaliação oficial será baseada na execução completa dos 18 casos.

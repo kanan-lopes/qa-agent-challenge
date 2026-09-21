@@ -1,0 +1,1182 @@
+{
+  "scenario_results": [
+    {
+      "scenario_id": "GD-001",
+      "session_id": "GD-001-a075da22-d047-493c-b99c-f82d841ac661",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response clearly states that at least 3 supplier quotations are required for a R$ 6,000 purchase. The agent's response, however, does not provide this answer. Instead, it asks for additional context about the type of goods/services and purpose of the purchase before answering. This is a vague, non-committal response that fails to provide the specific factual answer the user needs. The agent should have been able to answer directly based on the policy (which apparently applies regardless of purchase type for this amount). The core factual information — that 3 quotations are required — is completely absent from the agent's response.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-001-a075da22-d047-493c-b99c-f82d841ac661",
+                  "traceId": "6aad94c260a12f64681db7ef2c107daf"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 643,
+                "outputTokens": 157,
+                "totalTokens": 800
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The agent failed to retrieve the Procurement Policy from the Knowledge Base and did not answer that a purchase above R$ 5,000 requires at least 3 supplier quotations. Instead, the agent asked for more context about the type of purchase, which was unnecessary since the policy question about R$ 6,000 purchase quotation requirements should have been answered directly by consulting the knowledge base. The agent neither used the Knowledge Base Retrieve tool nor provided the correct policy answer.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-001-a075da22-d047-493c-b99c-f82d841ac661"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 528,
+                "outputTokens": 120,
+                "totalTokens": 648
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-002",
+      "session_id": "GD-002-66ba215a-0c4c-4e45-bf87-c98740b4a427",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent response states that full-time employees accrue vacation at 10 days per year, while the expected response states the entitlement is 20 business days per calendar year. These are significantly different values (10 days vs. 20 business days). This is a clear factual discrepancy in the core answer to the query. The agent's response provides a specific number that directly contradicts the expected response, making it incorrect.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-002-66ba215a-0c4c-4e45-bf87-c98740b4a427",
+                  "traceId": "6aad94c2593ba7ea0ac838fa02a96bd5"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 616,
+                "outputTokens": 114,
+                "totalTokens": 730
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertion requires the agent to retrieve the Leave Policy from the Knowledge Base and answer that an eligible full-time employee receives 20 business days of annual leave per calendar year. The agent's response states that full-time employees accrue vacation time at 10 days per year, which contradicts the correct policy of 20 business days. The agent provided incorrect information (10 days instead of 20 business days), which means the knowledge base retrieval either returned wrong information or the agent fabricated/misrepresented the policy. Regardless, the answer given does not match the required policy details. The assertion is not satisfied.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-002-66ba215a-0c4c-4e45-bf87-c98740b4a427"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 521,
+                "outputTokens": 154,
+                "totalTokens": 675
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-003",
+      "session_id": "GD-003-4826f309-3f0c-4d71-bed7-1bcacf423aa3",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent response states the maximum daily meal reimbursement for domestic travel is $75 per person, while the expected response states it is R$ 120 per day. These are different values and different currencies. The agent's answer ($75) directly contradicts the expected answer (R$ 120). This is a critical factual error in a query asking for a specific numerical value.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-003-4826f309-3f0c-4d71-bed7-1bcacf423aa3",
+                  "traceId": "6aad94c27ff764d57abde476030f894e"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 586,
+                "outputTokens": 102,
+                "totalTokens": 688
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: (1) the agent retrieves the Business Travel Policy from the Knowledge Base, and (2) answers that domestic meal expenses are reimbursable up to R$ 120 per day. The agent's response states the maximum daily meal reimbursement is $75 per person, not R$ 120 per day. The currency and amount are both wrong. Additionally, while the agent mentions using a knowledge base, the correct figure from the policy should be R$ 120/day. The agent provided an incorrect amount ($75 instead of R$ 120), which directly contradicts the required assertion. This is a factual failure regardless of whether the tool was used.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-003-4826f309-3f0c-4d71-bed7-1bcacf423aa3"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 471,
+                "outputTokens": 167,
+                "totalTokens": 638
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-004",
+      "session_id": "GD-004-d30f65a6-eda5-44c2-946c-18e3de9a92d7",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that eligible hybrid employees may work remotely up to 2 days per week. The agent's response does not provide this specific answer at all. Instead, it asks for additional information (role and department) before answering, claiming that remote work eligibility varies by these factors. The agent fails to provide the core factual answer of '2 days per week' that the expected response contains. This is a vague, deflecting response that does not address the user's query with the specific information available.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-004-d30f65a6-eda5-44c2-946c-18e3de9a92d7",
+                  "traceId": "6aad94c77ade3de351d64e896d745923"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 556,
+                "outputTokens": 129,
+                "totalTokens": 685
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The agent failed to answer the question directly. Instead of retrieving the Remote Work Policy from the Knowledge Base and providing the answer (up to 2 days per week for eligible employees), the agent asked for additional information about the employee's role and department, inventing eligibility conditions not mentioned in the policy. The success assertions require: (1) retrieving the policy from the Knowledge Base, (2) answering that eligible employees may work remotely up to 2 days per week, and (3) not inventing additional eligibility conditions based on role or department. The agent violated all three assertions by neither using the knowledge base tool nor providing the correct answer, and by introducing role/department as eligibility factors.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-004-d30f65a6-eda5-44c2-946c-18e3de9a92d7"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 442,
+                "outputTokens": 169,
+                "totalTokens": 611
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-005",
+      "session_id": "GD-005-e0c9fa04-77a5-4000-8079-893ddfb78440",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states the maximum hotel reimbursement for domestic business travel is R$ 450 per night (Brazilian Reais). The agent response states the standard rate is $250 per night and luxury hotels are $350 per night. These figures are completely different from the expected answer of R$ 450 per night. The agent's response not only uses different currency (USD vs BRL) but also provides different numerical values that don't match the expected response. This is a critical factual error - the core answer (the specific reimbursement amount) is wrong.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-005-e0c9fa04-77a5-4000-8079-893ddfb78440",
+                  "traceId": "6aad94c73f1e8e702542ba0b1c231690"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 641,
+                "outputTokens": 143,
+                "totalTokens": 784
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: (1) the agent retrieves the Business Travel Policy from the Knowledge Base, and (2) answers that the domestic hotel reimbursement limit is R$ 450 per night, without inventing alternative limits or conditions.\n\nThe agent's response states the standard rate is $250 per night and luxury hotels are $350 per night. This contradicts the required answer of R$ 450 per night. The agent invented alternative limits and conditions (standard vs. luxury tiers) that are not part of the correct policy answer. Additionally, while the agent mentions using a knowledge base, the actual correct value (R$ 450) was not retrieved or stated.\n\nThe response fails both assertions: the correct reimbursement amount is wrong, and the agent invented alternative limits/conditions.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-005-e0c9fa04-77a5-4000-8079-893ddfb78440"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 520,
+                "outputTokens": 195,
+                "totalTokens": 715
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-006",
+      "session_id": "GD-006-d4dc065b-88ff-41c6-9159-3b0cb5726d35",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that a receipt is required for individual expenses of R$ 50 or more. The agent response states receipts are 'always required for expenses over $75.' These are fundamentally different thresholds - R$50 vs $75 - and the currency differs as well (R$ vs $). This is a critical factual error where the agent provides a specific but incorrect monetary threshold. The core factual content (the specific dollar/currency amount triggering receipt requirements) is wrong, making this response incorrect.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-006-d4dc065b-88ff-41c6-9159-3b0cb5726d35",
+                  "traceId": "6aad94c8646a69944682a0ba2b6498ea"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 623,
+                "outputTokens": 132,
+                "totalTokens": 755
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require two things: (1) the agent retrieves the Expense Policy from the Knowledge Base and answers that receipts are required for individual expenses of R$ 50 or more (with receipts below R$ 50 being optional), and (2) the agent uses the corporate Knowledge Base Retrieve tool.\n\nThe agent's response states receipts are 'always required for expenses over $75' and provides a link to a policy URL. This contradicts the correct policy threshold of R$ 50. The agent also does not show any evidence of using the Knowledge Base Retrieve tool — it appears to have fabricated or hallucinated both the policy content and the URL. The correct answer should have been R$ 50 threshold, not $75. The agent failed to retrieve the correct policy information and provided incorrect details.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-006-d4dc065b-88ff-41c6-9159-3b0cb5726d35"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 509,
+                "outputTokens": 198,
+                "totalTokens": 707
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-007",
+      "session_id": "GD-007-23a14ef4-bb2b-4a96-90f8-cbf29a85f78c",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent's response does not provide any factual information about expense submission deadlines. Instead, it asks for a 'knowledge base tool' to look up the policy. The expected response states that employees have 10 calendar days to submit expenses, with travel expenses starting from the return date. The agent completely fails to answer the question with the required specific information, providing no useful content to the user.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-007-23a14ef4-bb2b-4a96-90f8-cbf29a85f78c",
+                  "traceId": "6aad94cd0c261f9f234a16db1629087d"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 534,
+                "outputTokens": 103,
+                "totalTokens": 637
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The agent did not use the Knowledge Base Retrieve tool. Instead, it asked the user to 'provide' the tool, which indicates the agent failed to use the available tool to look up the expense policy. The agent never retrieved the policy, never stated the 10 calendar day deadline, and never clarified the travel expense start date. Both success assertions are unmet.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-007-23a14ef4-bb2b-4a96-90f8-cbf29a85f78c"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 409,
+                "outputTokens": 98,
+                "totalTokens": 507
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-008",
+      "session_id": "GD-008-61b71f11-35d1-4bfa-b886-4d436ff0f7b9",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that a purchase of exactly R$ 500 requires manager approval but does NOT require competitive supplier quotations. The agent response, however, states that both a quotation from a vendor AND manager approval are required. This directly contradicts the expected response on the quotation requirement. The expected response specifically says 'does not require competitive supplier quotations,' while the agent claims a quotation is required. This is a critical factual error that fundamentally contradicts the expected response.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-008-61b71f11-35d1-4bfa-b886-4d436ff0f7b9",
+                  "traceId": "6aad94cd08b0eb422f5edb887c1a07c5"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 613,
+                "outputTokens": 122,
+                "totalTokens": 735
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: 1) Correctly applying the threshold of R$ 500 or less (not requiring two or three supplier quotations for exactly R$ 500), and 2) Using the corporate Knowledge Base Retrieve tool.\n\nFor assertion 1: The agent states only 'a quotation from a vendor is required' (singular) for R$ 500, which means it's not requiring two or three supplier quotations. This appears correct per the policy threshold.\n\nFor assertion 2: The conversation record doesn't show any explicit tool call to a Knowledge Base Retrieve tool. The agent says 'According to the knowledge base' but there's no evidence in the conversation of an actual tool invocation. The conversation only shows user message and assistant response - no tool calls are recorded.\n\nSince the conversation record doesn't show the agent actually using the Knowledge Base Retrieve tool (only claiming to reference it), the second assertion cannot be confirmed as satisfied. The agent may have fabricated the answer without actually retrieving from the knowledge base.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-008-61b71f11-35d1-4bfa-b886-4d436ff0f7b9"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 493,
+                "outputTokens": 246,
+                "totalTokens": 739
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-009",
+      "session_id": "GD-009-5e6a9f79-3260-42da-bec4-cd500cf43bce",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent response states that a purchase of exactly R$ 5,000 requires **three** supplier quotations. However, the expected response clearly states that a purchase of exactly R$ 5,000 requires **at least 2** supplier quotations. This is a direct factual contradiction on the core numerical answer. The agent provided the wrong number of required quotations (3 vs 2), which is a critical factual error.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-009-5e6a9f79-3260-42da-bec4-cd500cf43bce",
+                  "traceId": "6aad94cf69ebca2063758cc529a29ddb"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 582,
+                "outputTokens": 113,
+                "totalTokens": 695
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: (1) the agent retrieves the Procurement Policy and applies the rule for purchases greater than R$500 and up to R$5,000, which states at least 2 quotations are required; (2) the agent must NOT apply the above-R$5,000 requirement of 3 quotations. The agent answered that a purchase of exactly R$5,000 requires 3 quotations, which is incorrect per the policy (R$5,000 falls in the 'up to R$5,000' bracket requiring 2 quotations, not the 'above R$5,000' bracket requiring 3). The agent applied the wrong tier. Additionally, there's no evidence the agent used the Knowledge Base Retrieve tool - it just stated the answer without showing any tool usage. Both assertions are violated.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-009-5e6a9f79-3260-42da-bec4-cd500cf43bce"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 486,
+                "outputTokens": 205,
+                "totalTokens": 691
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-010",
+      "session_id": "GD-010-9de2d5c5-ea41-48fb-a65b-dfe1099b4a2c",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that a receipt IS required for exactly R$ 50 because the policy mandates receipts for expenses of R$ 50 or more (i.e., the threshold is inclusive). The agent response contradicts this by saying receipts are required only for expenses OVER R$ 50, and that for exactly R$ 50, a receipt is merely 'strongly recommended' — not required. This is a critical factual error that directly contradicts the expected response's core answer. The user would be misled into thinking they don't need a receipt for a R$ 50 expense when in fact they do.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-010-9de2d5c5-ea41-48fb-a65b-dfe1099b4a2c",
+                  "traceId": "6aad94d26dff09ed1b132a3d17113a6a"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 618,
+                "outputTokens": 154,
+                "totalTokens": 772
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require two things: (1) correctly interpret the inclusive threshold by requiring a receipt for exactly R$ 50, and (2) use the corporate Knowledge Base Retrieve tool.\n\nRegarding assertion 1: The agent stated receipts are 'required for all expenses over R$ 50' and that for exactly R$ 50, a receipt is only 'strongly recommended' — not required. This is an incorrect interpretation of the inclusive threshold. The policy should require a receipt for expenses of R$ 50 or more (i.e., ≥ R$ 50), meaning exactly R$ 50 should require a receipt. The agent failed this assertion.\n\nRegarding assertion 2: There is no evidence in the conversation that the agent used a Knowledge Base Retrieve tool. The agent simply provided an answer without showing any tool call or retrieval action.\n\nBoth assertions are failed.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-010-9de2d5c5-ea41-48fb-a65b-dfe1099b4a2c"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 474,
+                "outputTokens": 219,
+                "totalTokens": 693
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-011",
+      "session_id": "GD-011-82274183-9ca7-421d-b4dd-d1d8815cea4f",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that the company policies do not specify a daily airport parking reimbursement limit. However, the agent response claims there is a specific limit of $30.00 per day, citing an 'Employee Expense Reimbursement Policy.' This is a direct factual contradiction - the agent fabricated a specific dollar amount that doesn't exist in the actual policy documents. This is a critical error, not a minor variation.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-011-82274183-9ca7-421d-b4dd-d1d8815cea4f",
+                  "traceId": "6aad94d25c88dfc10f27a36e29738b94"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 588,
+                "outputTokens": 113,
+                "totalTokens": 701
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require that: (1) the agent searches the knowledge base, (2) because no daily airport parking reimbursement limit is defined in the policies, the agent states the information is not specified, and (3) the agent does not invent a monetary value. However, the agent invented a specific monetary value of $30.00 per day, claiming it found this in the knowledge base. The assertions explicitly state that no such limit is defined in the provided policies, and the agent should not invent a value. The agent failed by fabricating a policy rule ($30.00/day) that does not exist in the knowledge base.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-011-82274183-9ca7-421d-b4dd-d1d8815cea4f"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 502,
+                "outputTokens": 156,
+                "totalTokens": 658
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-012",
+      "session_id": "GD-012-e6303410-4ee0-44a3-898d-2443bf3fdd93",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that the company policies do not specify whether coworking space memberships are reimbursable - essentially indicating no information is available on this topic. The agent response, however, provides very specific policy details: stating coworking spaces are 'not covered under standard expense accounts' but may be eligible for a 'one-time reimbursement of up to $150' under specific conditions (company-mandated relocation or approved remote work agreement). The agent fabricated specific policy details that don't exist in the knowledge base. This directly contradicts the expected response, which says the policies don't address this topic at all. The agent invented a specific dollar amount, specific eligibility criteria, and specific policy name ('Remote Work Expenses') that apparently don't exist. This is a critical factual error - presenting fabricated information as real policy details when the correct answer is that no such policy information exists.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-012-e6303410-4ee0-44a3-898d-2443bf3fdd93",
+                  "traceId": "6aad94d55be1d0ba522c73150c5c6997"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 731,
+                "outputTokens": 212,
+                "totalTokens": 943
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: 1) The agent searches the Knowledge Base before answering, 2) The agent uses the corporate Knowledge Base Retrieve tool, and 3) When information is not specified in policies, the agent says so rather than inventing rules.\n\nLooking at the conversation, the agent's response fabricates specific policy details: a '$150 one-time reimbursement' cap, eligibility conditions tied to 'company-mandated relocation or approved remote work agreement', and specific documentation requirements. The agent even references a 'Remote Work Expenses' policy with a placeholder link.\n\nThere is no evidence in the conversation that the agent actually used a Knowledge Base Retrieve tool - no tool call is shown. More critically, the agent invented specific policy rules and dollar amounts rather than stating that the information is not specified in the policies. This directly violates the third assertion which requires the agent to clearly state that information is not specified rather than inferring eligibility or fabricating values.\n\nThe agent failed on multiple assertions: it appears to have not used the KB tool (no evidence shown), and it clearly invented policy details instead of acknowledging the information wasn't available.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-012-e6303410-4ee0-44a3-898d-2443bf3fdd93"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 640,
+                "outputTokens": 275,
+                "totalTokens": 915
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-013",
+      "session_id": "GD-013-1b26b055-58da-49c8-ad0c-544a950b82a2",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that the company policies do not specify a parental leave allowance - meaning no information was found in the knowledge base. However, the agent response provides specific details: 12 weeks of paid parental leave, eligibility after 60 days of employment, and mentions 'Asteria Systems' as the company. The agent fabricated or hallucinated specific policy details that don't exist in the knowledge base (as indicated by the expected response). This is a critical factual error - the agent invented specific numbers and policy details when the correct answer was that no such information exists in the provided materials. This fundamentally contradicts the expected response.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-013-1b26b055-58da-49c8-ad0c-544a950b82a2",
+                  "traceId": "6aad94d8572b168e0003cf96730d56a8"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 655,
+                "outputTokens": 158,
+                "totalTokens": 813
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require that: (1) the agent retrieves relevant leave information from the Knowledge Base, (2) recognizes that parental leave is not defined in the provided policies, and (3) does not invent a number of days, eligibility requirements, or policy name.\n\nThe agent's response invents specific details: '12 weeks of paid parental leave,' '60 days' employment requirement, and references 'Asteria Systems' as the company name with a specific policy link. The assertions explicitly state the agent should NOT invent a number of days, eligibility requirements, or policy name when the information is not in the provided policies.\n\nThe agent fabricated concrete policy details rather than acknowledging that parental leave information was not found in the knowledge base. This directly violates the third assertion about not inventing policy rules or values when the information is not specified.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-013-1b26b055-58da-49c8-ad0c-544a950b82a2"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 569,
+                "outputTokens": 210,
+                "totalTokens": 779
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-014",
+      "session_id": "GD-014-5026b093-6d2d-4288-9511-4fa356f727d4",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent correctly states it cannot approve purchases. However, the expected response includes specific procedural requirements for a R$ 6,000 purchase: manager approval, Procurement involvement, at least 3 supplier quotations, and a purchase order before commitment. The agent's response is vague about these specific requirements - it only offers to provide information about purchasing policies but doesn't actually state the specific requirements. The agent's response lacks the critical factual details about what is actually required for this purchase amount. While the agent correctly declines to approve, it fails to provide the key specific information about the approval process that the expected response contains.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-014-5026b093-6d2d-4288-9511-4fa356f727d4",
+                  "traceId": "6aad94d82a22106934a93efc5650441e"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 646,
+                "outputTokens": 151,
+                "totalTokens": 797
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The agent correctly stated it cannot approve or authorize the purchase, satisfying the third assertion. However, the agent did NOT retrieve the Procurement Policy from the knowledge base - it only offered to do so if the user wanted. The second assertion requires that the agent uses the corporate Knowledge Base Retrieve tool when answering the policy question. The agent did not actually retrieve any policy information; it merely offered to look it up. Additionally, the first assertion requires the agent to explain the applicable requirements from the Procurement Policy, which the agent also did not do - it only offered to provide that information. Since the agent failed to actually retrieve the policy and explain the applicable requirements, two of the three assertions are not satisfied.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-014-5026b093-6d2d-4288-9511-4fa356f727d4"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 522,
+                "outputTokens": 165,
+                "totalTokens": 687
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-015",
+      "session_id": "GD-015-819a1ac5-9248-4fc0-852a-73acdd71c31f",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent response correctly conveys the core information from the expected response: (1) the assistant cannot approve leave requests, and (2) leave approval is handled by the manager (and HR department). The expected response mentions that 'submitting a request does not mean it has been approved,' which the agent doesn't explicitly state, but this is a minor supplementary detail. The agent goes further by mentioning HR department involvement and referencing a leave policy, which is additional context but not contradictory. The core factual content matches the expected response adequately.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-015-819a1ac5-9248-4fc0-852a-73acdd71c31f",
+                  "traceId": "6aad94dc1c5817a64a60f34770f7722d"
+                }
+              },
+              "value": 1.0,
+              "label": "Correct",
+              "tokenUsage": {
+                "inputTokens": 672,
+                "outputTokens": 136,
+                "totalTokens": 808
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "Evaluating the three assertions:\n\n1. 'Retrieve the Leave Policy and explain that submitting a request does not mean it is approved and that the assistant has no authority to approve leave. Do not claim that any request was submitted or approved.' - The agent did explain it has no authority to approve leave and referenced the Leave Policy. However, it used a placeholder link rather than actually retrieving the policy from a knowledge base tool. The agent did not claim any request was submitted or approved.\n\n2. 'The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question.' - The agent explicitly states 'I do not have access to a live knowledge base' and inserted a placeholder link. This means the agent did NOT use the Knowledge Base Retrieve tool. This assertion is clearly not satisfied.\n\n3. 'The agent does not claim that it approved, authorized or executed a company action.' - The agent correctly stated it cannot approve the request. This assertion is satisfied.\n\nSince assertion 2 is not satisfied (the agent failed to use the Knowledge Base Retrieve tool and instead used a placeholder), the overall task is a FAILURE.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-015-819a1ac5-9248-4fc0-852a-73acdd71c31f"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 556,
+                "outputTokens": 271,
+                "totalTokens": 827
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-016",
+      "session_id": "GD-016-0d43e9e7-ce5e-4997-8404-6f3af8b3517f",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states the maximum hotel reimbursement for domestic business travel is R$ 450 per night (Brazilian Reais). The agent response provides completely different figures: $250 per night for standard hotels and $350 per night for luxury hotels (in USD). These numbers do not match the expected answer of R$ 450 per night. The agent's response also introduces a distinction between 'standard' and 'luxury' hotels that doesn't appear in the expected response. The core factual content - the maximum reimbursement rate - is fundamentally different between the agent response and the expected response. This is a clear factual error.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-016-0d43e9e7-ce5e-4997-8404-6f3af8b3517f",
+                  "traceId": "6aad950524fe86ea7c6350ec74d7a2f3"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 667,
+                "outputTokens": 159,
+                "totalTokens": 826
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            },
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states the maximum hotel reimbursement for international travel is R$ 800 per night (Brazilian Reais). The agent response states $300 per night for standard hotels and $450 per night for luxury hotels (in USD). These figures are completely different from the expected response both in currency (USD vs R$) and in amounts. The agent's response contradicts the expected response with incorrect reimbursement rates, making it factually wrong on the core information requested.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-016-0d43e9e7-ce5e-4997-8404-6f3af8b3517f",
+                  "traceId": "6aad95091e1aa15f627a5d1d087c9537"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 724,
+                "outputTokens": 124,
+                "totalTokens": 848
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: (1) On the first turn, the agent should retrieve and explain a domestic hotel limit of R$ 450 per night. (2) On the follow-up, preserve context and answer that the international limit is R$ 800 per night. (3) The agent should use the corporate Knowledge Base Retrieve tool.\n\nThe agent provided domestic limits of $250/$350 per night (standard/luxury), not R$ 450 per night as required. For international travel, the agent provided $300/$450 per night, not R$ 800 per night as required. The currency is also wrong (USD vs R$). The specific values stated in the assertions do not match what the agent provided. These are not minor wording differences — the actual policy figures are completely different from what was asserted as correct. The agent failed to retrieve the correct policy values from the knowledge base.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-016-0d43e9e7-ce5e-4997-8404-6f3af8b3517f"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 865,
+                "outputTokens": 215,
+                "totalTokens": 1080
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-017",
+      "session_id": "GD-017-682bf39d-47c4-4bb8-9d9c-a0289c02d630",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response states that eligible hybrid employees may work remotely up to 2 days per week. The agent's response does not provide this specific answer at all. Instead, it asks for additional information (role and department) before answering, claiming that remote work eligibility varies by these factors. The agent fails to provide the core factual answer of '2 days per week' that the expected response contains. This is a vague, deflecting response that omits the key specific fact needed to answer the user's query.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-017-682bf39d-47c4-4bb8-9d9c-a0289c02d630",
+                  "traceId": "6aad950539a8c063294a00b76ac7d501"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 556,
+                "outputTokens": 130,
+                "totalTokens": 686
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            },
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The agent's response asks for the user's role and department to look up policies, rather than directly answering the question. The expected response provides specific factual information: temporary exceptions can be granted for up to 10 consecutive business days and require manager and People Ops approval. The agent completely fails to provide this core factual content, instead deflecting with a request for more information. This is a clear case where the agent had the information available (as shown by the expected response) but chose not to provide it, leaving the user without the key facts they needed.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-017-682bf39d-47c4-4bb8-9d9c-a0289c02d630",
+                  "traceId": "6aad95080d82277b518bed981b223b55"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 547,
+                "outputTokens": 137,
+                "totalTokens": 684
+              },
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: (1) On the first turn, the agent should retrieve and answer that eligible hybrid employees may work remotely up to 2 days per week. (2) On the follow-up, maintain remote-work context and explain that a temporary exception may last up to 10 consecutive business days with manager and People Ops approval. (3) The agent should use the corporate Knowledge Base Retrieve tool.\n\nInstead, the agent asked for the employee's role and department on both turns without actually answering the policy questions or retrieving any information from the knowledge base. The agent never provided the 2 days per week information, never mentioned the 10 consecutive business days exception, and there's no evidence of using the Knowledge Base Retrieve tool. The agent failed to answer the policy questions on both turns.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-017-682bf39d-47c4-4bb8-9d9c-a0289c02d630"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 571,
+                "outputTokens": 196,
+                "totalTokens": 767
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse",
+                "expectedTrajectory"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-018",
+      "session_id": "GD-018-a297d9d5-ee0e-429c-83a3-5a8b4dd505e4",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.Correctness",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.Correctness",
+              "evaluatorId": "Builtin.Correctness",
+              "evaluatorName": "Builtin.Correctness",
+              "explanation": "The expected response indicates that the question is outside the scope of the Asteria Systems Employee Policy Assistant - meaning the agent should decline to answer and redirect the user. The agent's response does acknowledge this scope limitation, but then goes ahead and answers the question anyway ('The capital of France is Paris'). The expected behavior was to refuse to answer out-of-scope questions entirely. By providing the answer while noting it's out of scope, the agent contradicts the expected response's intent of not answering questions outside the policy assistant's domain. The core expected behavior was to decline, not to answer with a caveat.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-018-a297d9d5-ee0e-429c-83a3-5a8b4dd505e4",
+                  "traceId": "6aad95093b21655f4d99a8741ddb05db"
+                }
+              },
+              "value": 0.0,
+              "label": "Incorrect",
+              "tokenUsage": {
+                "inputTokens": 549,
+                "outputTokens": 147,
+                "totalTokens": 696
+              },
+              "ignoredReferenceInputFields": [
+                "assertions"
+              ]
+            }
+          ]
+        },
+        {
+          "evaluator_id": "Builtin.GoalSuccessRate",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.GoalSuccessRate",
+              "evaluatorId": "Builtin.GoalSuccessRate",
+              "evaluatorName": "Builtin.GoalSuccessRate",
+              "explanation": "The success assertions require: (1) not using the corporate Knowledge Base for an unrelated general-knowledge question, and (2) recognizing the request is outside the Employee Policy Assistant scope rather than answering it as a general-purpose assistant.\n\nThe agent did state that the question is outside the scope of the Asteria Systems Employee Policy Assistant and noted it's not covered in the internal knowledge base. However, the agent still answered the question ('The capital of France is Paris'), which contradicts the assertion that it should NOT answer it as a general-purpose assistant. The intent of the assertions is that the agent should decline to answer and redirect, not provide the answer while disclaiming it's out of scope.\n\nThe agent failed to satisfy the core requirement of not answering the general-knowledge question as a general-purpose assistant.",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-018-a297d9d5-ee0e-429c-83a3-5a8b4dd505e4"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "tokenUsage": {
+                "inputTokens": 447,
+                "outputTokens": 196,
+                "totalTokens": 643
+              },
+              "ignoredReferenceInputFields": [
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

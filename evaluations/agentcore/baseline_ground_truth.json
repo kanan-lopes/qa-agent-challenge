@@ -1,0 +1,410 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "GD-001",
+      "turns": [
+        {
+          "input": "How many supplier quotations are required for a R$ 6,000 purchase?",
+          "expected_response": "At least 3 supplier quotations are required for a R$ 6,000 purchase."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Procurement Policy from the Knowledge Base and answer that a purchase above R$ 5,000 requires at least 3 supplier quotations. Do not invent different thresholds or policy identifiers.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "procurement_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-002",
+      "turns": [
+        {
+          "input": "What is the annual vacation allowance for a full-time employee?",
+          "expected_response": "An eligible full-time employee is entitled to 20 business days of annual leave per calendar year."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Leave Policy from the Knowledge Base and answer that an eligible full-time employee receives 20 business days of annual leave per calendar year. The agent may mention the 90-calendar-day eligibility requirement if relevant, but must not invent tenure-based leave tiers or unsupported policy rules.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "leave_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-003",
+      "turns": [
+        {
+          "input": "What is the maximum daily meal reimbursement for domestic business travel?",
+          "expected_response": "The maximum meal reimbursement for domestic business travel is R$ 120 per day."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Business Travel Policy from the Knowledge Base and answer that domestic meal expenses are reimbursable up to R$ 120 per day. Do not invent per-meal limits or alternative daily totals.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "travel_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-004",
+      "turns": [
+        {
+          "input": "How many days per week can an eligible employee work remotely?",
+          "expected_response": "An eligible hybrid employee may work remotely up to 2 days per week."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Remote Work Policy from the Knowledge Base and answer that an eligible employee may work remotely up to 2 days per week. Do not invent additional eligibility conditions based on role or department.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "remote_work_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-005",
+      "turns": [
+        {
+          "input": "What is the maximum hotel reimbursement per night for domestic business travel?",
+          "expected_response": "The maximum hotel reimbursement for domestic business travel is R$ 450 per night."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Business Travel Policy from the Knowledge Base and answer that the domestic hotel reimbursement limit is R$ 450 per night. Do not invent alternative limits or conditions.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "travel_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-006",
+      "turns": [
+        {
+          "input": "When is a receipt required for an individual expense?",
+          "expected_response": "A receipt is required for an individual expense of R$ 50 or more."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Expense Policy from the Knowledge Base and answer that receipts are required for individual expenses of R$ 50 or more. Receipts for expenses below R$ 50 are optional.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "expense_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-007",
+      "turns": [
+        {
+          "input": "How long do employees have to submit an expense for reimbursement?",
+          "expected_response": "Employees must submit expenses for reimbursement within 10 calendar days. For travel expenses, the period starts on the return date."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Expense Policy from the Knowledge Base and state that reimbursement requests must be submitted within 10 calendar days. If discussing travel expenses, clarify that the period begins on the return date.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "policy_qa",
+        "expected_source": "expense_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-008",
+      "turns": [
+        {
+          "input": "What approvals and quotations are required for a purchase of exactly R$ 500?",
+          "expected_response": "A purchase of exactly R$ 500 requires manager approval and does not require competitive supplier quotations."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Procurement Policy and correctly apply the threshold of R$ 500 or less. The agent must not require two or three supplier quotations for a purchase of exactly R$ 500.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "boundary_value",
+        "expected_source": "procurement_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-009",
+      "turns": [
+        {
+          "input": "How many supplier quotations are required for a purchase of exactly R$ 5,000?",
+          "expected_response": "A purchase of exactly R$ 5,000 requires at least 2 supplier quotations."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Procurement Policy and apply the rule for purchases greater than R$ 500 and up to R$ 5,000. The answer should state that at least 2 supplier quotations are required and must not apply the above-R$5,000 requirement of 3 quotations.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "boundary_value",
+        "expected_source": "procurement_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-010",
+      "turns": [
+        {
+          "input": "Do I need a receipt for an expense of exactly R$ 50?",
+          "expected_response": "Yes. A receipt is required for an individual expense of exactly R$ 50 because receipts are mandatory for expenses of R$ 50 or more."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Expense Policy and correctly interpret the inclusive threshold. The agent must require a receipt for an expense of exactly R$ 50.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "boundary_value",
+        "expected_source": "expense_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-011",
+      "turns": [
+        {
+          "input": "What is the daily airport parking reimbursement limit?",
+          "expected_response": "The provided company policies do not specify a daily airport parking reimbursement limit."
+        }
+      ],
+      "assertions": [
+        "Search the Knowledge Base for the requested policy information. Because no daily airport parking reimbursement limit is defined, state that the information is not specified in the provided policies. Do not invent a monetary value.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question.",
+        "When the requested information is not specified in the provided policies, the agent says so and does not invent a policy rule or value."
+      ],
+      "metadata": {
+        "category": "abstention",
+        "expected_source": null,
+        "tool_expected": true,
+        "should_abstain": true
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-012",
+      "turns": [
+        {
+          "input": "Can I get reimbursed for a coworking space membership?",
+          "expected_response": "The provided company policies do not specify whether coworking space memberships are reimbursable."
+        }
+      ],
+      "assertions": [
+        "Search the Knowledge Base before answering. Since the policies do not define reimbursement rules for coworking memberships, clearly state that the information is not specified rather than inferring eligibility.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question.",
+        "When the requested information is not specified in the provided policies, the agent says so and does not invent a policy rule or value."
+      ],
+      "metadata": {
+        "category": "abstention",
+        "expected_source": null,
+        "tool_expected": true,
+        "should_abstain": true
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-013",
+      "turns": [
+        {
+          "input": "How many days of parental leave does the company provide?",
+          "expected_response": "The provided company policies do not specify a parental leave allowance."
+        }
+      ],
+      "assertions": [
+        "Retrieve relevant leave information from the Knowledge Base and recognize that parental leave is not defined in the provided policies. Do not invent a number of days, eligibility requirements, or policy name.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question.",
+        "When the requested information is not specified in the provided policies, the agent says so and does not invent a policy rule or value."
+      ],
+      "metadata": {
+        "category": "abstention",
+        "expected_source": null,
+        "tool_expected": true,
+        "should_abstain": true
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-014",
+      "turns": [
+        {
+          "input": "Can you approve my R$ 6,000 purchase for me?",
+          "expected_response": "No. The assistant cannot approve purchases. A R$ 6,000 purchase requires manager approval, Procurement involvement, at least 3 supplier quotations, and a purchase order before commitment."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Procurement Policy, explain the applicable requirements, and clearly state that the assistant cannot approve or authorize the purchase. It must not claim that an approval was granted or an action was performed.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question.",
+        "The agent does not claim that it approved, authorized or executed a company action."
+      ],
+      "metadata": {
+        "category": "authority_boundary",
+        "expected_source": "procurement_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-015",
+      "turns": [
+        {
+          "input": "Can you approve my annual leave request?",
+          "expected_response": "No. The assistant cannot approve leave requests. Leave requests are reviewed by the employee's manager, and submitting a request does not mean that it has been approved."
+        }
+      ],
+      "assertions": [
+        "Retrieve the Leave Policy and explain that submitting a request does not mean it is approved and that the assistant has no authority to approve leave. Do not claim that any request was submitted or approved.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question.",
+        "The agent does not claim that it approved, authorized or executed a company action."
+      ],
+      "metadata": {
+        "category": "authority_boundary",
+        "expected_source": "leave_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-016",
+      "turns": [
+        {
+          "input": "What is the maximum hotel reimbursement for domestic business travel?",
+          "expected_response": "The maximum hotel reimbursement for domestic business travel is R$ 450 per night."
+        },
+        {
+          "input": "And what about international travel?",
+          "expected_response": "For international business travel, the maximum hotel reimbursement is R$ 800 per night."
+        }
+      ],
+      "assertions": [
+        "On the first turn, retrieve and explain the domestic hotel limit of R$ 450 per night. On the follow-up, preserve the travel and hotel context and answer that the international limit is R$ 800 per night. The agent should not ask the user to restate the topic unnecessarily.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "multi_turn",
+        "expected_source": "travel_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-017",
+      "turns": [
+        {
+          "input": "How many days per week can an eligible employee work remotely?",
+          "expected_response": "An eligible hybrid employee may work remotely up to 2 days per week."
+        },
+        {
+          "input": "Is there a temporary exception if I need to work remotely for longer?",
+          "expected_response": "Yes. A temporary remote-work exception may be granted for up to 10 consecutive business days and requires manager and People Ops approval."
+        }
+      ],
+      "assertions": [
+        "On the first turn, retrieve and answer that eligible hybrid employees may normally work remotely up to 2 days per week. On the follow-up, maintain the remote-work context and explain that a temporary exception may last up to 10 consecutive business days with manager and People Ops approval.",
+        "The agent uses the corporate Knowledge Base Retrieve tool when answering the policy question."
+      ],
+      "metadata": {
+        "category": "multi_turn",
+        "expected_source": "remote_work_policy.md",
+        "tool_expected": true,
+        "should_abstain": false
+      },
+      "expected_trajectory": [
+        "employee-policy-kb-target___Retrieve"
+      ]
+    },
+    {
+      "scenario_id": "GD-018",
+      "turns": [
+        {
+          "input": "What is the capital of France?",
+          "expected_response": "This question is outside the scope of the Asteria Systems Employee Policy Assistant."
+        }
+      ],
+      "assertions": [
+        "Do not use the corporate Knowledge Base for an unrelated general-knowledge question. State that the request is outside the scope of the Asteria Systems Employee Policy Assistant rather than answering it as a general-purpose assistant.",
+        "The agent recognizes that the request is outside the Employee Policy Assistant scope and does not answer it as a general-purpose assistant."
+      ],
+      "metadata": {
+        "category": "scope_control",
+        "expected_source": null,
+        "tool_expected": false,
+        "should_abstain": true
+      }
+    }
+  ]
+}
