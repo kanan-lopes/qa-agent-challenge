@@ -1,0 +1,330 @@
+{
+  "metadata": {
+    "project": "Asteria Systems Employee Policy Assistant",
+    "purpose": "Reference contexts for DeepEval baseline evaluation",
+    "methodology": "Curated from the official Asteria Systems policy documents for reference-grounded faithfulness. These are not runtime retrieval contexts from Agent v1 because the baseline agent did not execute Retrieve.",
+    "faithfulness_label": "reference-grounded faithfulness",
+    "runtime_rag_faithfulness": "not available for Agent v1 baseline",
+    "gd_018_note": "GD-018 is excluded from Faithfulness because it is intentionally out of policy scope."
+  },
+  "cases": [
+    {
+      "case_id": "GD-001",
+      "category": "policy_qa",
+      "source_policy": [
+        "procurement_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "For purchases above R$5,000, Asteria Systems requires manager approval, Procurement approval, at least 3 competitive quotations, and a Purchase Order before commitment."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-002",
+      "category": "policy_qa",
+      "source_policy": [
+        "leave_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Eligible full-time employees receive 20 business days of annual leave per year.",
+            "Employees become eligible for annual leave after 90 calendar days of employment."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-003",
+      "category": "policy_qa",
+      "source_policy": [
+        "travel_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "For domestic travel, meal expenses are reimbursable up to R$120 per day.",
+            "Meal reimbursement is based on actual expenses, and alcohol is not reimbursable."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-004",
+      "category": "policy_qa",
+      "source_policy": [
+        "remote_work_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Eligible employees may work remotely up to 2 days per week and must work from the office at least 3 days per week.",
+            "Unused remote-work days do not carry over."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-005",
+      "category": "policy_qa",
+      "source_policy": [
+        "travel_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "The maximum reimbursable hotel rate for domestic travel is R$450 per night.",
+            "A domestic hotel rate above R$450 per night requires written director approval."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-006",
+      "category": "policy_qa",
+      "source_policy": [
+        "expense_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "A receipt is required for expenses of R$50 or more.",
+            "For expenses below R$50, a receipt is optional.",
+            "Employees must not split expenses to avoid receipt or approval requirements."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-007",
+      "category": "policy_qa",
+      "source_policy": [
+        "expense_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Expenses must be submitted within 10 calendar days.",
+            "For travel expenses, the 10-calendar-day submission period starts on the employee's return date."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-008",
+      "category": "boundary_value",
+      "source_policy": [
+        "procurement_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Purchases of R$500 or less require manager approval and do not require competitive quotations."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-009",
+      "category": "boundary_value",
+      "source_policy": [
+        "procurement_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Purchases above R$500 and up to and including R$5,000 require manager approval and at least 2 competitive quotations."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-010",
+      "category": "boundary_value",
+      "source_policy": [
+        "expense_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "A receipt is required for expenses of R$50 or more."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-011",
+      "category": "abstention",
+      "source_policy": [
+        "travel_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "The Travel Policy specifies rules for flights, hotel rates, meal limits, and reasonable ground transportation.",
+            "The provided Travel Policy does not specify a daily reimbursement limit for airport parking."
+          ]
+        }
+      ],
+      "context_kind": "negative_reference_summary"
+    },
+    {
+      "case_id": "GD-012",
+      "category": "abstention",
+      "source_policy": [
+        "remote_work_policy.md",
+        "expense_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "The Remote Work Policy defines hybrid remote-work limits, temporary exceptions, international remote-work requirements, and core working hours.",
+            "The provided Remote Work and Expense policies do not specify reimbursement for coworking-space fees."
+          ]
+        }
+      ],
+      "context_kind": "negative_reference_summary"
+    },
+    {
+      "case_id": "GD-013",
+      "category": "abstention",
+      "source_policy": [
+        "leave_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "The Leave Policy specifies annual leave and emergency personal leave rules.",
+            "The provided Leave Policy does not specify parental-leave entitlement or duration."
+          ]
+        }
+      ],
+      "context_kind": "negative_reference_summary"
+    },
+    {
+      "case_id": "GD-014",
+      "category": "authority_boundary",
+      "source_policy": [
+        "procurement_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "For purchases above R$5,000, Asteria Systems requires manager approval, Procurement approval, at least 3 competitive quotations, and a Purchase Order before commitment.",
+            "The Employee Policy Assistant cannot approve purchases, select a supplier, issue a Purchase Order, authorize payment, or alter procurement thresholds."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-015",
+      "category": "authority_boundary",
+      "source_policy": [
+        "leave_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Leave requests are reviewed by the employee's manager.",
+            "Submitting a leave request does not mean that the leave has been approved.",
+            "The Employee Policy Assistant cannot approve leave requests."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-016",
+      "category": "multi_turn",
+      "source_policy": [
+        "travel_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "The maximum reimbursable hotel rate for domestic travel is R$450 per night.",
+            "A domestic hotel rate above R$450 per night requires written director approval."
+          ]
+        },
+        {
+          "turn": 2,
+          "reference_context": [
+            "The maximum reimbursable hotel rate for international travel is R$800 per night.",
+            "An international hotel rate above R$800 per night requires written director approval."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-017",
+      "category": "multi_turn",
+      "source_policy": [
+        "remote_work_policy.md"
+      ],
+      "include_in_faithfulness": true,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": [
+            "Eligible employees may work remotely up to 2 days per week and must work from the office at least 3 days per week.",
+            "Unused remote-work days do not carry over."
+          ]
+        },
+        {
+          "turn": 2,
+          "reference_context": [
+            "A temporary remote-work exception may be approved for up to 10 consecutive business days.",
+            "A temporary remote-work exception requires approval from the employee's manager and People Ops."
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "GD-018",
+      "category": "scope_control",
+      "source_policy": [],
+      "include_in_faithfulness": false,
+      "turns": [
+        {
+          "turn": 1,
+          "reference_context": []
+        }
+      ],
+      "exclusion_reason": "Out-of-scope general-knowledge case; there is no relevant company-policy reference context for a Faithfulness comparison."
+    }
+  ]
+}
