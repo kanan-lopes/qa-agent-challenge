@@ -1,0 +1,514 @@
+{
+  "scenario_results": [
+    {
+      "scenario_id": "GD-001",
+      "session_id": "GD-001-3c9214eb-1149-434a-812e-13ed21787ff5",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-001-3c9214eb-1149-434a-812e-13ed21787ff5"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-002",
+      "session_id": "GD-002-40ab9d47-381c-4ad2-a250-3cb810dc1a3d",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-002-40ab9d47-381c-4ad2-a250-3cb810dc1a3d"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-003",
+      "session_id": "GD-003-1a171626-6e31-42ce-b7bd-63164d727c93",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-003-1a171626-6e31-42ce-b7bd-63164d727c93"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-004",
+      "session_id": "GD-004-17681239-e362-47ad-833b-b3d65af755a6",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-004-17681239-e362-47ad-833b-b3d65af755a6"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-005",
+      "session_id": "GD-005-7b89eb90-5fd5-4998-a6ed-b7732d76aebd",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-005-7b89eb90-5fd5-4998-a6ed-b7732d76aebd"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-006",
+      "session_id": "GD-006-4a3dfb5d-a1d8-47a5-859f-11d04a2ef613",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-006-4a3dfb5d-a1d8-47a5-859f-11d04a2ef613"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-007",
+      "session_id": "GD-007-2b6f7d69-4590-4f3b-9ffe-de878f11b9d4",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order mismatch: Missing tools: 'employee-policy-kb-target___Retrieve' (need 1 more). Expected: ['employee-policy-kb-target___Retrieve'], Actual: []",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-007-2b6f7d69-4590-4f3b-9ffe-de878f11b9d4"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-008",
+      "session_id": "GD-008-d379475d-5609-42f8-9dd7-dcddbab53e62",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-008-d379475d-5609-42f8-9dd7-dcddbab53e62"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-009",
+      "session_id": "GD-009-762de039-a673-454b-9481-22e4bf1a42c4",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-009-762de039-a673-454b-9481-22e4bf1a42c4"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-010",
+      "session_id": "GD-010-b971dd41-a861-4759-8564-5682241d27b0",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order mismatch: Missing tools: 'employee-policy-kb-target___Retrieve' (need 1 more). Expected: ['employee-policy-kb-target___Retrieve'], Actual: []",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-010-b971dd41-a861-4759-8564-5682241d27b0"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-011",
+      "session_id": "GD-011-e4303ab0-c118-4cb0-ae8e-efd9805177c6",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-011-e4303ab0-c118-4cb0-ae8e-efd9805177c6"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-012",
+      "session_id": "GD-012-1296de0d-8abd-4f76-bc60-3959b3c3a4a0",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order mismatch: Missing tools: 'employee-policy-kb-target___Retrieve' (need 1 more). Expected: ['employee-policy-kb-target___Retrieve'], Actual: []",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-012-1296de0d-8abd-4f76-bc60-3959b3c3a4a0"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-013",
+      "session_id": "GD-013-e0d11948-0600-4c2d-9936-83a6e44d2139",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-013-e0d11948-0600-4c2d-9936-83a6e44d2139"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-014",
+      "session_id": "GD-014-647d88c6-de7d-46f3-a522-4b1d6e9c624b",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-014-647d88c6-de7d-46f3-a522-4b1d6e9c624b"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-015",
+      "session_id": "GD-015-9a23314d-b577-490b-9e4a-32a8a78e5b26",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-015-9a23314d-b577-490b-9e4a-32a8a78e5b26"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-016",
+      "session_id": "GD-016-6ca956ba-e1a4-495a-acc1-3d6f3b8354ed",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order mismatch: Missing tools: 'employee-policy-kb-target___Retrieve' (need 1 more). Expected: ['employee-policy-kb-target___Retrieve'], Actual: []",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-016-6ca956ba-e1a4-495a-acc1-3d6f3b8354ed"
+                }
+              },
+              "value": 0.0,
+              "label": "No",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scenario_id": "GD-017",
+      "session_id": "GD-017-fd27edd9-300c-40bc-a2ca-3834fd711945",
+      "status": "COMPLETED",
+      "error": null,
+      "evaluator_results": [
+        {
+          "evaluator_id": "Builtin.TrajectoryAnyOrderMatch",
+          "results": [
+            {
+              "evaluatorArn": "arn:aws:bedrock-agentcore:::evaluator/Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorId": "Builtin.TrajectoryAnyOrderMatch",
+              "evaluatorName": "Builtin.TrajectoryAnyOrderMatch",
+              "explanation": "Any-order match: All expected tools ['employee-policy-kb-target___Retrieve'] found in actual ['employee-policy-kb-target___Retrieve']",
+              "context": {
+                "spanContext": {
+                  "sessionId": "GD-017-fd27edd9-300c-40bc-a2ca-3834fd711945"
+                }
+              },
+              "value": 1.0,
+              "label": "Yes",
+              "ignoredReferenceInputFields": [
+                "assertions",
+                "expectedResponse"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
