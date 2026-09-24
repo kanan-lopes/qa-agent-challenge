@@ -26,7 +26,7 @@ DATASET_PATH = (
 RESULTS_DIR = (
     PROJECT_ROOT
     / "results"
-    / "baseline"
+    / "v2"
 )
 
 HARNESS_ARN = os.getenv("HARNESS_ARN")
@@ -646,9 +646,9 @@ def main():
     run_id = uuid.uuid4().hex[:8]
 
     if args.mode == "pilot":
-        actor_prefix = "pilot"
+        actor_prefix = "v2-pilot"
     else:
-        actor_prefix = "baseline-full"
+        actor_prefix = "v2-full"
 
     print(
         f"\nRun ID: {run_id}"
