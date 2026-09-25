@@ -1,0 +1,11 @@
+# Runtime / AWS
+boto3
+bedrock-agentcore
+
+# Evaluation
+deepeval
+pytest
+
+# Local LLM judge / structured output
+ollama
+pydantic
